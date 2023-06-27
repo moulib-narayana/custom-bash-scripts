@@ -12,6 +12,7 @@ All the required custom bash scripts are defined here.
         - [Add the functions](#add-the-functions)
     - [Open .zshrc file](#open-zshrc-file)
   - [Setup Finished](#setup-finished)
+  - [Shortcuts Available](#shortcuts-available)
 
 ## Setup
 
@@ -56,5 +57,44 @@ source $HOME/.custom_bash_commands.sh
 ## Setup Finished
 
 - Now close your existing terminal and open again and you are ready to use your custom bash commands.
-- 
 
+### Shortcuts available
+
+| Shortcut    | Description                                                |
+|-------------|------------------------------------------------------------|
+| c           | Clears the terminal.                                       |
+| quit        | Quits the terminal.                                        |
+|             |                                                            |
+| nConnect Project Code Shortcuts:                               | 
+| parent      | Opens the parent app code in Visual Studio Code.           |
+| staff       | Opens the staff app code in Visual Studio Code.            |
+| server      | Opens the server app code in Visual Studio Code.           |
+| admin       | Opens the admin panel web app code in Visual Studio Code.  |
+| disha       | Opens the disha web app code in Visual Studio Code.        |
+| dcadmin     | Opens the disha admin panel web app code in Visual Studio Code.  |
+|             |                                                            |
+| Flutter shortcuts:                                            |
+| flr         | Runs the Flutter app.                                      |
+| flc         | Cleans the Flutter project.                                |
+| fcg         | Cleans the Flutter project and installs the packages.      |
+| fbr         | Builds Runner for Flutter projects.                        |
+| fci         | Cleans Flutter project including iOS and installs all the packages.  |
+| ffc         | Cleans the Flutter project and runs the app.               |
+| fcl <pkg>   | Opens the package website in pub.dev.                      |
+| frr         | Runs the Flutter app in release mode.                      |
+| fjavafix    | Fixes the Java issue in Android Studio.                    |
+|             |                                                            |
+| Nuxt shortcuts:                                               |
+| nrd         | Runs the Nuxt app using NPM.                               |
+| ni          | Installs packages from the package.json file using NPM.    |
+| yi          | Installs packages from the package.json file using Yarn.   |
+| yc          | Cleans the Nuxt project by removing yarn.lock, .nuxt, and node_modules folders. |
+| yci         | Cleans and installs packages for the Nuxt project.         |
+| yd          | Runs the Nuxt app using Yarn.                              |
+| ycid        | Cleans, installs packages, and runs the Nuxt project.      |
+| yu          | Checks for package upgrades using Yarn.                    |
+|             |                                                            |
+| ASP.NET shortcuts:                                            |
+| dr          | Runs the ASP.NET app.                                      |
+| dre         | Restores packages for the ASP.NET app.                     |
+| openapi <url> | Generates TypeScript interfaces from a Swagger API specification. |
