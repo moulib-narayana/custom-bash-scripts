@@ -28,7 +28,7 @@ All the required custom bash scripts are defined here.
 
 - Create a new file .custom_bash_commands.sh in the root directory.
 
-OR 
+OR
 
 - Execute the follow commands:
 
@@ -58,14 +58,29 @@ source $HOME/.custom_bash_commands.sh
 
 - Now close your existing terminal and open again and you are ready to use your custom bash commands.
 
-### Shortcuts available
+<br />
+
+<div style="background-color: #ffe6e6; color:black; border-left: 4px solid #ff0000; padding: 10px; margin-bottom: 20px;">
+
+<span style="font-size: 20px; margin-right: 10px;"> 📌 </span>
+
+**NOTE:**
+In the **nConnect Project Code Shortcuts** section, choose the shortcuts that are relevant to you and your project.
+
+</div>
+
+<br />
+
+
+## Shortcuts available
 
 | Shortcut    | Description                                                |
 |-------------|------------------------------------------------------------|
+| **Util Shortcuts:**                               |
 | c           | Clears the terminal.                                       |
 | quit        | Quits the terminal.                                        |
 |             |                                                            |
-| nConnect Project Code Shortcuts:                               | 
+| **nConnect Project Code Shortcuts:**                               |
 | parent      | Opens the parent app code in Visual Studio Code.           |
 | staff       | Opens the staff app code in Visual Studio Code.            |
 | server      | Opens the server app code in Visual Studio Code.           |
@@ -73,7 +88,7 @@ source $HOME/.custom_bash_commands.sh
 | disha       | Opens the disha web app code in Visual Studio Code.        |
 | dcadmin     | Opens the disha admin panel web app code in Visual Studio Code.  |
 |             |                                                            |
-| Flutter shortcuts:                                            |
+| **Flutter shortcuts:**                                            |
 | flr         | Runs the Flutter app.                                      |
 | flc         | Cleans the Flutter project.                                |
 | fcg         | Cleans the Flutter project and installs the packages.      |
@@ -84,7 +99,7 @@ source $HOME/.custom_bash_commands.sh
 | frr         | Runs the Flutter app in release mode.                      |
 | fjavafix    | Fixes the Java issue in Android Studio.                    |
 |             |                                                            |
-| Nuxt shortcuts:                                               |
+| **Nuxt shortcuts:**                                               |
 | nrd         | Runs the Nuxt app using NPM.                               |
 | ni          | Installs packages from the package.json file using NPM.    |
 | yi          | Installs packages from the package.json file using Yarn.   |
@@ -94,7 +109,7 @@ source $HOME/.custom_bash_commands.sh
 | ycid        | Cleans, installs packages, and runs the Nuxt project.      |
 | yu          | Checks for package upgrades using Yarn.                    |
 |             |                                                            |
-| ASP.NET shortcuts:                                            |
+| **ASP.NET shortcuts:**                                            |
 | dr          | Runs the ASP.NET app.                                      |
 | dre         | Restores packages for the ASP.NET app.                     |
 | openapi <url> | Generates TypeScript interfaces from a Swagger API specification. |
