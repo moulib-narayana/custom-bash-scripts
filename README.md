@@ -78,7 +78,7 @@ In the **nConnect Project Code Shortcuts** section, choose the shortcuts that ar
 |-------------|------------------------------------------------------------|
 | **Util Shortcuts:**                               |
 | c           | Clears the terminal.                                       |
-| quit        | Quits the terminal.                                        |
+| q, quit     | Quits the terminal.                                        |
 |             |                                                            |
 | **nConnect Project Code Shortcuts:**                               |
 | parent      | Opens the parent app code in Visual Studio Code.           |
