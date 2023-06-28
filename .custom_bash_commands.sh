@@ -357,7 +357,7 @@ function help() {
         echo -e "dre            - ${GREEN}Restores packages for the ASP.NET app.${ENDCOLOR}"
         echo -e "openapi <url>  - ${GREEN}Generates TypeScript interfaces from a Swagger API specification.${ENDCOLOR}"
 
-    elif [ "$1" = "flutter" ]; then
+    elif [ "$1" = "flutter" ] || [ $1 = "--flutter" ]; then
         # Display Flutter-related functions or commands
         echo -e "${YELLOW}Flutter-related functions or commands:${ENDCOLOR}"
         echo -e "flr            - ${GREEN}Runs the Flutter app.${ENDCOLOR}"
@@ -369,12 +369,14 @@ function help() {
         echo -e "fcl <pkg>      - ${GREEN}Opens the package website in pub.dev.${ENDCOLOR}"
         echo -e "frr            - ${GREEN}Runs the Flutter app in release mode.${ENDCOLOR}"
         echo -e "fjavafix       - ${GREEN}Fixes the Java issue in Android Studio.${ENDCOLOR}"
-    elif [ "$1" = "utils" ]; then
+
+    elif [ "$1" = "utils" ] || [ "$1" = "--utils" ]; then
         # Display utility functions or commands
         echo -e "${YELLOW}Utility functions or commands:${ENDCOLOR}"
         echo -e "c              - ${GREEN}Clears the terminal.${ENDCOLOR}"
         echo -e "quit           - ${GREEN}Quits the terminal.${ENDCOLOR}"
-    elif [ "$1" = "office" ]; then
+
+    elif [ "$1" = "office" ] || [ "$1" = "--office" ]; then
         # Display nConnect project code shortcuts
         echo -e "${YELLOW}nConnect Project Code Shortcuts:${ENDCOLOR}"
         echo -e "parent         - ${GREEN}Opens the parent app code in Visual Studio Code.${ENDCOLOR}"
@@ -383,7 +385,8 @@ function help() {
         echo -e "admin          - ${GREEN}Opens the admin panel web app code in Visual Studio Code.${ENDCOLOR}"
         echo -e "disha          - ${GREEN}Opens the disha web app code in Visual Studio Code.${ENDCOLOR}"
         echo -e "dcadmin        - ${GREEN}Opens the disha admin panel web app code in Visual Studio Code.${ENDCOLOR}"
-    elif [ "$1" = "nuxt" ]; then
+
+    elif [ "$1" = "nuxt" ] || [ "$1" = "--nuxt" ]; then
         # Display Nuxt shortcuts
         echo -e "${YELLOW}Nuxt Shortcuts:${ENDCOLOR}"
         echo -e "nrd            - ${GREEN}Runs the Nuxt app using NPM.${ENDCOLOR}"
@@ -394,14 +397,22 @@ function help() {
         echo -e "yd             - ${GREEN}Runs the Nuxt app using Yarn.${ENDCOLOR}"
         echo -e "ycid           - ${GREEN}Cleans, installs packages, and runs the Nuxt project.${ENDCOLOR}"
         echo -e "yu             - ${GREEN}Checks for package upgrades using Yarn.${ENDCOLOR}"
-    elif [ "$1" = "c#" ]; then
+
+    elif [ "$1" = "c#" ] || [ "$1" = "--c#" ]; then
         # Display C# shortcuts
         echo -e "${YELLOW}C# Shortcuts:${ENDCOLOR}"
         echo -e "dr             - ${GREEN}Runs the ASP.NET app.${ENDCOLOR}"
         echo -e "dre            - ${GREEN}Restores packages for the ASP.NET app.${ENDCOLOR}"
         echo -e "openapi <url>  - ${GREEN}Generates TypeScript interfaces from a Swagger API specification.${ENDCOLOR}"
+
     else
         # Invalid or unknown option
         echo -e "${RED}Invalid option. Please use 'help' to see all available functions or commands.${ENDCOLOR}"
+        echo -e "${YELLOW}Available commands are: ${ENDCOLOR}"
+        echo -e "${CYAN}help flutter | help --flutter ${ENDCOLOR}"
+        echo -e "${CYAN}help nuxt | help --nuxt ${ENDCOLOR}"
+        echo -e "${CYAN}help utils | help --utils ${ENDCOLOR}"
+        echo -e "${CYAN}help c# | help --c# ${ENDCOLOR}"
+        echo -e "${CYAN}help office | help --office ${ENDCOLOR}"
     fi
 }
