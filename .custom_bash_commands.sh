@@ -20,6 +20,7 @@ function c() {
 function quit() {
     kill $(pgrep -a Terminal)
 }
+
 alias q='quit'
 alias quit='quit'
 
@@ -103,7 +104,6 @@ function fci() {
 }
 
 # Clean and run the flutter project
-# Clean and run the flutter project
 function ffc() {
     if [[ "$1" == "--help" ]]; then
 
@@ -129,8 +129,10 @@ ${CYAN}ffc --help${ENDCOLOR}"
 
 # Open package website (in pub.dev)
 function fcl() {
-    if [[ "$1" == "--help" ]]; then
-        echo -e "${GREEN}fcl() - Open the URL of a Flutter package on pub.dev.${ENDCOLOR}
+    if [[ "$1" == "--help" ]] || [[ "$1" == "--h" ]] || [[ "$1" == "-h" ]]; then
+        echo -e "${GREEN}fcl - Open the URL of a Flutter package on pub.dev.${ENDCOLOR}
+
+--help | --h | -h: Provides you the help
 
 ${YELLOW}Description:${ENDCOLOR}
 The ${CYAN}fcl()${ENDCOLOR} function allows you to quickly open the URL of a Flutter package on the ${CYAN}pub.dev${ENDCOLOR} website. It automatically generates the URL based on the package name provided as an argument and opens it in your default web browser.
@@ -155,6 +157,9 @@ ${YELLOW}Procedure:${ENDCOLOR}
     open $url
 }
 
+alias fcl\ --help='fcl --help'
+alias fcl\ --h='fcl --help'
+
 # Flutter: Run in release mode
 function frr() {
     flutter run --release
@@ -166,6 +171,78 @@ function fjavafix() {
 }
 
 # Nuxt Shortcuts
+
+# Creating a nuxt2 project
+function create-nuxt2() {
+    # Check if yarn or npm is installed
+    if ! command -v yarn &>/dev/null && ! command -v npm &>/dev/null; then
+        echo "Error: Neither yarn nor npm is installed. Please install either yarn or npm to continue."
+        exit 1
+    fi
+
+    echo "Enter the project name: "
+    read project_name
+
+    # Ask user for yarn or npm preference
+    echo "Do you want to use yarn or npm? [y/n] "
+    read answer
+
+    if [[ "$answer" =~ ^[Yy]$ ]]; then
+        # Create nuxt2 project using yarn
+        yarn create nuxt-app "$project_name"
+        cd "$project_name"
+        code .
+    elif [[ "$answer" =~ ^[Nn]$ ]]; then
+        # Create nuxt2 project using yarn
+        npm init nuxt-app "$project_name"
+        cd "$project_name"
+        code .
+    else
+        echo "Invalid input. Please enter either Y/y or N/n."
+        exit 1
+    fi
+
+    q
+}
+
+# Creating a nuxt3 project
+function create-nuxt3() {
+    # Check if yarn or npm is installed
+    if ! command -v yarn &>/dev/null && ! command -v npm &>/dev/null; then
+        echo "Error: Neither yarn nor npm is installed. Please install either yarn or npm to continue."
+        exit 1
+    fi
+
+    echo "Enter the project name: "
+    read project_name
+
+    # Create a new nuxt3 project
+    npx nuxi@latest init "$project_name"
+
+    # Change the current path to the project's root path
+    cd "$project_name"
+
+    # Ask user for yarn or npm preference
+    echo "Do you want to use yarn or npm? [y/n] "
+    read answer
+
+    if [[ "$answer" =~ ^[Yy]$ ]]; then
+        # Install dependencies using yarn
+        yarn install
+    elif [[ "$answer" =~ ^[Nn]$ ]]; then
+        # Install dependencies using npm
+        npm install
+    else
+        echo "Invalid input. Please enter either Y/y or N/n."
+        exit 1
+    fi
+
+    code .
+    q
+}
+
+alias cn2='create-nuxt2'
+alias cn3='create-nuxt3'
 
 # NPM shortcuts
 
@@ -321,7 +398,7 @@ function help() {
     if [ -z "$1" ]; then
         echo -e "${YELLOW}General Shortcuts / Utils shortcuts:${ENDCOLOR}"
         echo -e "c              - ${GREEN}Clears the terminal.${ENDCOLOR}"
-        echo -e "quit           - ${GREEN}Quits the terminal.${ENDCOLOR}"
+        echo -e "quit, q        - ${GREEN}Quits the terminal.${ENDCOLOR}"
         echo -e ""
         echo -e "${YELLOW}nConnect Project Code Shortcuts:${ENDCOLOR}"
         echo -e "parent         - ${GREEN}Opens the parent app code in Visual Studio Code.${ENDCOLOR}"
@@ -343,6 +420,8 @@ function help() {
         echo -e "fjavafix       - ${GREEN}Fixes the Java issue in Android Studio.${ENDCOLOR}"
         echo -e ""
         echo -e "${YELLOW}Nuxt shortcuts:${ENDCOLOR}"
+        echo -e "create-nuxt2, cn2 - ${GREEN}Creates a nuxt2 app.${ENDCOLOR}"
+        echo -e "create-nuxt3, cn3 - ${GREEN}Creates a nuxt3 app.${ENDCOLOR}"
         echo -e "nrd            - ${GREEN}Runs the Nuxt app using NPM.${ENDCOLOR}"
         echo -e "ni             - ${GREEN}Installs packages from the package.json file using NPM.${ENDCOLOR}"
         echo -e "yi             - ${GREEN}Installs packages from the package.json file using Yarn.${ENDCOLOR}"
@@ -389,6 +468,8 @@ function help() {
     elif [ "$1" = "nuxt" ] || [ "$1" = "--nuxt" ]; then
         # Display Nuxt shortcuts
         echo -e "${YELLOW}Nuxt Shortcuts:${ENDCOLOR}"
+        echo -e "create-nuxt2, cn2 - ${GREEN}Creates a nuxt2 app.${ENDCOLOR}"
+        echo -e "create-nuxt3, cn3 - ${GREEN}Creates a nuxt3 app.${ENDCOLOR}"
         echo -e "nrd            - ${GREEN}Runs the Nuxt app using NPM.${ENDCOLOR}"
         echo -e "ni             - ${GREEN}Installs packages from the package.json file using NPM.${ENDCOLOR}"
         echo -e "yi             - ${GREEN}Installs packages from the package.json file using Yarn.${ENDCOLOR}"

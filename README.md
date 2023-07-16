@@ -66,6 +66,7 @@ source $HOME/.custom_bash_commands.sh
 
 **NOTE:**
 In the **nConnect Project Code Shortcuts** section, choose the shortcuts that are relevant to you and your project.
+parent(), staff(), admin(), server(), disha(), dcadmin(). Paths in these functions should be changed according to your path.
 
 </div>
 
@@ -100,6 +101,8 @@ In the **nConnect Project Code Shortcuts** section, choose the shortcuts that ar
 | fjavafix    | Fixes the Java issue in Android Studio.                    |
 |             |                                                            |
 | **Nuxt shortcuts:**                                               |
+| create-nuxt3, cn3         | Creates a new nuxt3 project, install packages & opens the project directory in the vs code.                               |
+| create-nuxt2, cn2         | Creates a new nuxt2 project, install packages & opens the project directory in the vs code.                               |
 | nrd         | Runs the Nuxt app using NPM.                               |
 | ni          | Installs packages from the package.json file using NPM.    |
 | yi          | Installs packages from the package.json file using Yarn.   |
