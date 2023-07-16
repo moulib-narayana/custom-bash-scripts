@@ -1,6 +1,9 @@
 # Custom Bash Scripts
 All the required custom bash scripts are defined here.
 
+# MOTO Behind these custom bash scripts
+Since almost everyone is working on different nConnect projects at a time. It would be better if we have a list of custom bash commands which directly ease our workflow.
+
 # Table of Contents
 
 - [Custom Bash Scripts](#custom-bash-scripts)
